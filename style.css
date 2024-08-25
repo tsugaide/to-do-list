@@ -1,0 +1,64 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(25, 46, 46);
+}
+.container {
+  position: relative;
+  width: 450px;
+  height: 550px;
+  background-color: darkslategrey;
+  border-radius: 30px;
+  box-shadow: 25px 25px 75px rgba(9, 22, 22, 0.27),
+    10px 10px 70px rgba(9, 22, 22, 0.27),
+    inset 5px 5px 10px rgba(9, 22, 22, 0.27);
+}
+.container h1 {
+  text-align: center;
+}
+.container input {
+  width: 400px;
+  margin-left: 20px;
+  height: 50px;
+  border-radius: 200px;
+  outline: none;
+}
+ul li {
+  position: relative;
+  width: 260px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  background: rgb(21, 109, 150);
+  padding: 5px;
+  border-radius: 20px;
+  margin: 10px 0;
+  outline: none;
+}
+
+ul span {
+  position: absolute;
+  width: 34px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: blue;
+  margin-left: 325px;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+}
+#edit {
+  position: absolute;
+  width: 34px;
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
+  background-color: blue;
+  margin-left: 280px;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 14.5px;
+  cursor: pointer;
+}

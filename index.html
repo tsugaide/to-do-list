@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>To do List</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>List Hari ini</h1>
+      <input id="input" />
+      <ul id="txt"></ul>
+    </div>
+  </body>
+  <script>
+    const enter = document.getElementById("input");
+    const body = document.querySelector(".container");
+    const txt = document.getElementById("txt");
+    enter.style.fontSize = "15px";
+    enter.style.fontFamily = "Georgia, Times New Roman, Times, serif";
+
+    enter.addEventListener("keydown", function (event) {
+      if (event.keyCode === 13) {
+        addItem(enter.value);
+        enter.value = "";
+      }
+    });
+
+    function addItem(enter) {
+      const i = document.createElement("li");
+      i.innerHTML = `${enter}<span id = 'span' onclick='hapus(this)'>X</span><span id = 'edit' onclick='edit(this)'>📝
+            </span>`;
+      txt.appendChild(i);
+      i.style.height = i.scrollHeight + "px";
+    }
+
+    function hapus(element) {
+      element.parentNode.remove();
+    }
+    function edit(element) {
+      const li = element.parentNode;
+      li.setAttribute("contenteditable", "true");
+
+      document.addEventListener("click", function (event) {
+        if (!li.contains(event.target)) {
+          li.setAttribute("contenteditable", "false");
+        }
+      });
+    }
+  </script>
+</html>
