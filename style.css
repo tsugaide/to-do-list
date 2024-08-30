@@ -1,64 +1,107 @@
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgb(25, 46, 46);
-}
-.container {
-  position: relative;
-  width: 450px;
-  height: 550px;
-  background-color: darkslategrey;
-  border-radius: 30px;
-  box-shadow: 25px 25px 75px rgba(9, 22, 22, 0.27),
-    10px 10px 70px rgba(9, 22, 22, 0.27),
-    inset 5px 5px 10px rgba(9, 22, 22, 0.27);
-}
-.container h1 {
-  text-align: center;
-}
-.container input {
-  width: 400px;
-  margin-left: 20px;
-  height: 50px;
-  border-radius: 200px;
-  outline: none;
-}
-ul li {
-  position: relative;
-  width: 260px;
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  background: rgb(21, 109, 150);
-  padding: 5px;
-  border-radius: 20px;
-  margin: 10px 0;
-  outline: none;
+  background-color: rgb(27, 132, 231);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-ul span {
-  position: absolute;
-  width: 34px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  background-color: blue;
-  margin-left: 325px;
+.container {
+  background-color: white;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+
+  padding: 10px 0 50px 0;
+  border-radius: 10px;
+}
+
+h1 {
+  color: rgb(26, 112, 192);
   text-align: center;
-  border-radius: 50%;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+input {
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form button {
+  background-color: rgb(69, 175, 227);
   color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
   cursor: pointer;
 }
-#edit {
+
+.list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  background-color: wheat;
+  margin: 20px 20px 0 20px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.editDandelete {
+  display: flex;
+  flex-direction: row;
   position: absolute;
-  width: 34px;
-  padding-top: 7.5px;
-  padding-bottom: 7.5px;
-  background-color: blue;
-  margin-left: 280px;
-  text-align: center;
-  border-radius: 50%;
+  gap: 10px;
+  right: 0;
+  margin-right: 20px;
+}
+
+.list p {
+  max-width: 250px;
+}
+
+.check {
+  width: 15px;
+  margin: 0 10px;
+}
+
+.edit {
+  background-color: rgb(69, 175, 227);
+  padding: 8px;
+  border-radius: 8px;
   color: white;
-  font-size: 14.5px;
   cursor: pointer;
+  width: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.edit svg,
+.del svg {
+  fill: white;
+}
+
+.del {
+  background-color: rgb(240, 30, 30);
+  padding: 8px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  width: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.checked {
+  text-decoration: line-through;
 }
